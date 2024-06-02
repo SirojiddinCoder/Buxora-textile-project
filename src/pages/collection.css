@@ -1,0 +1,160 @@
+.container22 {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+.forma {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.card {
+    padding: 16px;
+    text-align: center;
+    margin: 8px;
+    width: 200px;
+    height: 200px;  
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.card p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.card-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-left: 150px;
+}
+
+.pagination {
+    margin-top: 10px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 12px;
+    border-radius: 9px;
+    cursor: pointer;
+    border: none;
+}
+
+.pagination button.active {
+    background: rgb(244, 44, 55);
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination-cards {
+    margin-bottom: 100px;
+}
+
+.collection-iitem {
+    list-style-type: none;
+}
+
+.collection-link {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.collection-link:hover {
+    color: red;
+    font-weight: bold;
+    transition: 0.4s all ease-in-out;
+    background-color: #e6e8ed;
+}
+
+.search {
+    background: rgb(226, 226, 226);
+    background: linear-gradient(94deg, #e2e2e2, 52%, 89%);
+    border-radius: 30px;
+    border: none;
+    max-width: 100%;
+    padding: 14px 28px;
+    outline: none;
+    border: none;
+}
+
+.toplam-text {
+    margin: 0;
+    font-family: sans-serif;
+    color: black;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.toplam-text-2 {
+    font-family: sans-serif;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.count {
+    padding-bottom: 120px;
+}
+
+.filter-select form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.filter-select select {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select select:hover {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.filter-select select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.filter-select select:active {
+    background-color: #f0f0f0;
+}
+
+.filter-select select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22%20fill%3D%22%23007bff%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+}

@@ -1,0 +1,43 @@
+.About-Container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.line-about{
+    width: 450px;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto;
+}
+.about-us{
+   margin-top: 80px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+
+}
+.about-title{
+    text-align: center;
+    font-size: 40px;
+  
+   
+}
+.aboutIcon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -30px;
+    margin: 0 auto;
+}
+.about-desc{
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 15px;
+    line-height: 25px;
+    color: #999;
+}
+.video-content{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}

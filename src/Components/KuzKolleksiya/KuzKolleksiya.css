@@ -1,0 +1,33 @@
+
+
+.winter-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+.winter-desc{
+    text-align: center;
+    font-size: 22px;
+    color: #aaa;
+    margin: 10px;
+}
+.winter-block{
+    margin-top: 200px;
+}
+.winter-card{
+    width: 250px;
+    height: 260px;
+
+}
+.winter-card-groups{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+.winter-img{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+}

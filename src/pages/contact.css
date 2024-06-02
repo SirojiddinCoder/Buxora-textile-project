@@ -1,0 +1,55 @@
+
+
+.contact-us{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ margin-top: 150px;
+ margin-bottom: 100px;
+}
+.contact-input{
+    border-radius: 50px;
+    border: none;
+    background-color: #efefef;
+    padding: 20px 180px;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: black;
+    margin: 20px 0;
+    outline: none;
+}
+.contact-textAre{
+    border-radius: 20px;
+    height: 263px;
+   width: 70%;
+   margin: 20px 0;
+   background-color: #efefef;
+   padding: 25px;
+   border: none;
+   outline: none;
+   margin-bottom: 40px;
+}
+.contact-title{
+    font-family: "Poppins", Sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 73px;
+    letter-spacing: -1.2px;
+    color: black;
+    margin: 0 0 16px;
+}
+.send-btn{
+    text-decoration: none;
+    color: white;
+    background-color: #F42C37;
+    padding: 15px 70px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+   
+}
+.send-btn:hover{
+    background-color: #a69c9c;
+    color: red;
+    transition: 0.3s all ease-in-out;
+}
