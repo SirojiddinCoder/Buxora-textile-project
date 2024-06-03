@@ -5,10 +5,11 @@ import './Footer.css';
 import { IoIosTime } from "react-icons/io";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaTelegram, FaInstagram, FaFacebookF } from "react-icons/fa";
-import logo from "../../assets/logo.png";
+// import { FaTelegram, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -21,8 +22,8 @@ export const Footer = () => {
             <IoIosTime className='ikon' />
           </div>
           <div>
-            <p>Dushanba-Juma <br />
-              Soat: 09:00-18:00
+            <p>{t('Footer.footer')} <br />
+            {t('Footer.time')} 
               <br />
               <br />
          
@@ -35,7 +36,7 @@ export const Footer = () => {
             <MdOutlineMarkEmailUnread className='ikon' />
           </div>
           <div>
-            <p>Elekron pochta <br />
+            <p>  {t('Footer.email')} <br />
               Bnpuz@bk.ru</p>
           </div>
         </div>
@@ -56,7 +57,7 @@ export const Footer = () => {
 
       <div className="footer1">
         <p className='text-copy'>
-          © 2024 MChJ "BUXORA NATURAL PRODUCT". Barcha huquqlar himoyalangan.
+        {t('Footer.copytext')}
         </p>
       </div>
     </>

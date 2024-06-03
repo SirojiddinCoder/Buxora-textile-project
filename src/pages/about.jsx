@@ -6,7 +6,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './about.css';
 
+import { useTranslation } from "react-i18next";
+
 export const About = () => {
+
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -16,30 +20,29 @@ export const About = () => {
       <Navbar />
       <div className="About-Container">
         <div className="about-us" data-aos="fade-up">
-          <h2 className='about-title'>Biz haqimizda</h2>
+          
+          <h2 className='about-title'>{t('about.about-title')}</h2>
           <div className="line-about"></div>
           <img className='aboutIcon' src={AboutIcon} alt="About Icon" />
         </div>
 
         <p className='about-desc' data-aos="fade-up">
-          Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalar 
-          Fabrikamız uzoq yillar davomida butun dunyoda foydalanish uchun paxta 
-          matolarini ishlab chiqaradigan kompaniya bo'lib kelgan.
+        {t('about.about-desc1')}
         </p>
         <p className='about-desc' data-aos="fade-up">
-          Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalarUshbu kompaniya 17 yildan beri mijozlarga xizmat ko'rsatmoqda.
+        {t('about.about-desc2')}
         </p>
-        <p className="about-desc" data-aos="fade-up">Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalarUshbu kompaniyaning asosiy maqsadi yuqori sifatli va tejamkor mahsulotlar ishlab chiqarishdir.</p>
-        <p className="about-desc" data-aos="fade-up">Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalarUshbu kompaniyaning ishlab chiqarish jarayoni butunlay ekologik toza.</p>
-        <p className="about-desc" data-aos="fade-up">Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalarKorxonada xaridorlarning talab va takliflari asosida har qanday turdagi paxta xomashyosi ishlab chiqarilishi mumkin.</p>
-        <p className="about-desc" data-aos="fade-up">Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalarKompaniya DongJia to‘quv mashinalarining O‘zbekistondagi rasmiy dileri hisoblanadi.</p>
-        <p className="about-desc" data-aos="fade-up">Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalarAyni paytda 80 dan ortiq oila o‘z oilasini moddiy jihatdan ta’minlab, korxona nufuzi va muvaffaqiyatiga hissa qo‘shmoqda.</p>
-        <p className="about-desc" data-aos="fade-up">Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalarBu talabni qondirish maqsadida 50 ta to‘quv dastgohi to‘xtovsiz yuqori tezlikda ishlamoqda.</p>
+        <p className="about-desc" data-aos="fade-up"> {t('about.about-desc3')}</p>
+        <p className="about-desc" data-aos="fade-up"> {t('about.about-desc4')}</p>
+        <p className="about-desc" data-aos="fade-up"> {t('about.about-desc5')}</p>
+        <p className="about-desc" data-aos="fade-up"> {t('about.about-desc6')}</p>
+        <p className="about-desc" data-aos="fade-up"> {t('about.about-desc7')}</p>
+        <p className="about-desc" data-aos="fade-up"> {t('about.about-desc8')}</p>
         <p className="about-desc" data-aos="fade-up">
-          Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalarOyiga 200-250 ming metr gazlama to‘qish quvvatiga egamiz.
+        {t('about.about-desc9')}
         </p>
         <p className="about-desc" data-aos="fade-up">
-          Buxoro matolari, Eko sumkalar, Buxoro matolari, Eko sumkalar“Bukhara Natural Product” kompaniyasi oʻz sodiq mijozlariga istalgan vaqtda xizmat koʻrsatishdan mamnun.
+        {t('about.about-desc10')}
         </p>
 
         <div className="video-content" data-aos="fade-up">

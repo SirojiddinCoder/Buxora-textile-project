@@ -25,6 +25,11 @@ import img18 from '../assets/siteimg/k8.jpg';
 import img19 from '../assets/siteimg/k9.jpg';
 import img25 from '../assets/siteimg/k10.jpg';
 
+
+import { useTranslation } from "react-i18next";
+
+
+
 const Card = ({ image, title }) => {
     return (
         <div className="card" data-aos="fade-up">
@@ -35,6 +40,10 @@ const Card = ({ image, title }) => {
 };
 
 const Collection = () => {
+
+    const { t } = useTranslation();
+
+
     const cardsData = [
         { id: 1, image: img1, title: "Kvadratchalar", category: "Bahor Kolleksiyasi" },
         { id: 2, image: img2, title: 'Ikat', category: "Qish Kolleksiyasi" },
