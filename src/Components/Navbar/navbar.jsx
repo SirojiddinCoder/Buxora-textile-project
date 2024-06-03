@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
@@ -74,9 +74,26 @@ export const Navbar = () => {
     setShowNavbar(!showNavbar);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 0) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="Home page">
-      <nav className="navbar">
+      <nav className="navbar" id="navbar">
         <div className="container">
           <div className="logo">
             <img
