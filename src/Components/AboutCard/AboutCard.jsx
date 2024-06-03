@@ -2,11 +2,14 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../AboutCard/AboutCard.css';
+import { useTranslation } from "react-i18next";
 import WrapperImg from '../../assets/siteimg/AboutCard1.png';
 import WrapperImg2 from '../../assets/siteimg/AboutCard2.png'; // Aslida boshqa rasmni import qilish
 import WrapperImg3 from '../../assets/siteimg/AboutCard3.png'; // Uchinchi rasmni import qilish
 
 const AboutCard = ({ images1, images3 }) => {
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -25,21 +28,21 @@ const AboutCard = ({ images1, images3 }) => {
       <div className="wrapper-block" data-aos="fade-in">
         <div className="wrapper-left" data-aos="fade-right">
           <p className="wrapper-title">100%</p>
-          <p className="wrapper-desc">Materialning sifati</p>
+          <p className="wrapper-desc">{t('aboutCard.wrapper-desc')}</p>
         </div>
         <div className="wrapper-middle" data-aos="zoom-in">
           <img className='WrapperImg' src={imageSrc} alt="images" />
         </div>
         <div className="wrapper-right" data-aos="fade-left">
           <p className="middle-title">
-            "Buxoro Tabiiy mahsuloti"
+            {t('aboutCard.middle-title')}
           </p>
           <p className="middle-desc">
-            Ko'p yillar davomida butun dunyoda <br />
-            foydalanish uchun paxta matolarini <br />
-            ishlab chiqaradigan kompaniya bo'lib kelgan <br />
+            {t('aboutCard.middle-desc1')} <br />
+            {t('aboutCard.middle-desc2')} <br />
+            {t('aboutCard.middle-desc3')} <br />
             <div className="line">
-              <a href="#" className='wrapper-btn'>To'plamlar</a>
+              <a href="#" className='wrapper-btn'>{t('aboutCard.wrapper-btn')}</a>
             </div>
           </p>
         </div>

@@ -1,0 +1,62 @@
+{
+    "header":{
+     "menu1":"Asosiy",
+     "menu2":"Biz haqimizda",
+     "menu3":"Kolleksiyalar",
+     "menu4":"Bog'lanish"
+     
+    },
+    "navbarHome":{
+        "home1":"Buxoro",
+        "home2":"Tabiiy",
+        "home3":"MAHSULOT",
+        "card-title":"Yetkazib berish bepul",
+        "home-card-desc":"Barcha buyurtmalar uchun bepul yetkazib berish",
+        "card-title2":"Qaytish kafolati",
+        "home-card-desc2":"30 kunlik pulni qaytarish",
+        "card-title3":"24/7 onlayn qo'llab-quvvatlash",
+        "home-card-desc3":"24/7 texnik yordam",
+        "card-title4":"Xavfsiz to'lov",
+        "home-card-desc4":"Barcha to'lov usullari qabul qilinadi"
+      
+        
+       },
+       "aboutCard":{
+        "wrapper-desc":"Materialning sifati",
+        "middle-title":"  'Buxoro Tabiiy mahsuloti'",
+        "middle-desc1":" Ko'p yillar davomida butun dunyoda",
+        "middle-desc2":" foydalanish uchun paxta matolarini",
+        "middle-desc3":"  ishlab chiqaradigan kompaniya bo'lib kelgan",
+        "wrapper-btn":"To'plamlar"
+
+       },
+       "winterData":{
+        "title1":"Safari",
+        "title2":"Ko'p rangli ametist",
+        "title3":"Shivali bezak",
+        "title4":"Malaxit qutisi",
+        "title5":"Bahorning hidlari",
+        "title6":"Kuzgi barglar tushishi",
+        "title7":"Moviy shabada",
+        "title8":"Moviy suv ",
+        "title9":"Safari",
+        "title10":"Plaid"
+       },
+       "summerData":{
+        "title1":"Vintage uslubi",
+        "title2":"hilpiragan karahindiba",
+        "title3":"Fransuz Riviera",
+        "title4":"Qo'y Dolli",
+        "title5":"Alp tog'lari o'simliklari",
+        "title6":"Ilhomlantiruvchi",
+        "title7":"Yashil lotus",
+        "title8":"Tog'li makkajo'xori ",
+        "title9":"Sakura filiali",
+        "title10":"Zaytun novdasi",
+        "k":"Qish kolleksiyasi",
+        "k1":"Kuz kolleksiyasi",
+        "k2":"Yoz kolleksiyasi"
+         
+       }
+     
+}

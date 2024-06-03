@@ -22,7 +22,12 @@ export const Footer = () => {
           </div>
           <div>
             <p>Dushanba-Juma <br />
-              Soat: 09:00-18:00</p>
+              Soat: 09:00-18:00
+              <br />
+              <br />
+         
++998 93 960 78 00
+              </p>
           </div>
         </div>
         <div className="footer-1" data-aos="fade-up" data-aos-delay="100">

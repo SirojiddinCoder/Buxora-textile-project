@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
 import uzbekFlag from "../../assets/uzbflag1.png";
 import usaFlag from "../../assets/englandflag.png";
 import russiaFlag from "../../assets/rusflag.png";
+
 
 const Hamburger = () => (
   <svg
@@ -46,12 +48,13 @@ const Hamburger = () => (
 );
 
 const options = [
-  { value: "uzbek", label: "Uzbek", image: uzbekFlag },
-  { value: "english", label: "English", image: usaFlag },
-  { value: "russian", label: "Russian", image: russiaFlag },
+  { value: "uz", label: "Uzbek", image: uzbekFlag },
+  { value: "en", label: "English", image: usaFlag },
+  { value: "ru", label: "Russian", image: russiaFlag },
 ];
 
 export const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [showNavbar, setShowNavbar] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(options[0]);
@@ -60,14 +63,8 @@ export const Navbar = () => {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+    i18n.changeLanguage(option.value);
     setIsOpen(false);
-
-    // Add effect
-    const dropdownItem = document.getElementById(`dropdown-item-${option.value}`);
-    dropdownItem.classList.add('selected');
-    setTimeout(() => {
-      dropdownItem.classList.remove('selected');
-    }, 1000); // Remove the class after 1 second (adjust the duration as needed)
   };
 
   const handleShowNavbar = () => {
@@ -108,16 +105,16 @@ export const Navbar = () => {
           <div className={`nav-elements ${showNavbar ? "active" : ""}`}>
             <ul>
               <li>
-                <Link to="/">Asosiy</Link>
+                <Link to="/" >{t('header.menu1')}</Link>
               </li>
               <li>
-                <Link to="/bizhaqimizda">Biz Haqimizda</Link>
+                <Link to="/bizhaqimizda">{t('header.menu2')}</Link>
               </li>
               <li>
-                <Link to="/toplamlar">To'plamlar Kolleksiyasi</Link>
+                <Link to="/toplamlar">{t('header.menu3')}</Link>
               </li>
               <li>
-                <Link to="/boglanish">Bog'lanish</Link>
+                <Link to="/boglanish">{t('header.menu4')}</Link>
               </li>
             </ul>
             <div className="language-selector">
@@ -135,7 +132,7 @@ export const Navbar = () => {
                     {options.map((option) => (
                       <div
                         key={option.value}
-                        id={`dropdown-item-${option.value}`} // Add unique ID
+                        id={`dropdown-item-${option.value}`}
                         className="dropdown-item"
                         onClick={() => handleOptionClick(option)}
                       >

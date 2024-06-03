@@ -1,0 +1,57 @@
+{
+    "header": {
+      "menu1": "Home",
+      "menu2": "About Us",
+      "menu3": "Collections",
+      "menu4": "Contact"
+    },
+    "navbarHome": {
+        "home1": "Bukhara",
+        "home2": "Natural",
+        "home3": "PRODUCT",
+        "card-title": "Free Delivery",
+        "home-card-desc": "Free shipping on all orders",
+        "card-title2": "Return Guarantee",
+        "home-card-desc2": "30-day money-back guarantee",
+        "card-title3": "24/7 Online Support",
+        "home-card-desc3": "24/7 technical support",
+        "card-title4": "Secure Payment",
+        "home-card-desc4": "All payment methods accepted"
+      },
+      "aboutCard": {
+        "wrapper-desc": "Quality of Material",
+        "middle-title": "'Bukhara Natural Product'",
+        "middle-desc1": "For many years, all over the world,",
+        "middle-desc2": "a company producing cotton fabrics",
+        "middle-desc3": "for use.",
+        "wrapper-btn": "Collections"
+      },
+      "winterData": {
+        "title1": "Safari",
+        "title2": "Multicolored Amethyst",
+        "title3": "Shivali Decoration",
+        "title4": "Malachite Box",
+        "title5": "Scents of Spring",
+        "title6": "Falling Autumn Leaves",
+        "title7": "Blue Breeze",
+        "title8": "Blue Water",
+        "title9": "Safari",
+        "title10": "Plaid"
+      },
+      "summerData": {
+        "title1": "Vintage Style",
+        "title2": "Floating Dandelion",
+        "title3": "French Riviera",
+        "title4": "Dolly the Sheep",
+        "title5": "Alpine Plants",
+        "title6": "Inspiring",
+        "title7": "Green Lotus",
+        "title8": "Mountain Corn",
+        "title9": "Sakura Branch",
+        "title10": "Olive Branch",
+        "k": "Winter Collection",
+        "k1": "Autumn Collection",
+        "k2": "Summer Collection"
+      }
+  }
+  

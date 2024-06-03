@@ -13,24 +13,32 @@ import img8 from '../../assets/siteimg/8.jpg';
 import img9 from '../../assets/siteimg/9.jpg';
 import img10 from '../../assets/siteimg/10.jpg';
 
-const winterData = [
-  { id: 1, img: img1, title: "Kvadratchalar" },
-  { id: 2, img: img2, title: "Ikat" },
-  { id: 3, img: img3, title: "Davralar" },
-  { id: 4, img: img4, title: "Geometriya ko'k" },
-  { id: 5, img: img5, title: "Tropik barglar" },
-  { id: 6, img: img6, title: "Bambi" },
-  { id: 7, img: img7, title: "Vizantiya" },
-  { id: 8, img: img8, title: "Kechki bog'" },
-  { id: 9, img: img9, title: "Pat Markiz" },
-  { id: 10, img: img10, title: "Lavanda atirgullari" },
-];
+import { useTranslation } from "react-i18next";
+
 
 const QishKolleksiya = () => {
+  const { t } = useTranslation();
+
+
+  const winterData = [
+    { id: 1, img: img1, title: t("winterData.title1") },
+    { id: 2, img: img2, title: t("winterData.title2") },
+    { id: 3, img: img3, title: t("winterData.title3") },
+    { id: 4, img: img4, title: t("winterData.title4") },
+    { id: 5, img: img5, title: t("winterData.title5") },
+    { id: 6, img: img6, title: t("winterData.title6") },
+    { id: 7, img: img7, title: t("winterData.title7") },
+    { id: 8, img: img8, title: t("winterData.title8") },
+    { id: 9, img: img9, title: t("winterData.title9") },
+    { id: 10, img: img10, title: t("winterData.title10") },
+  ];
+  
+
+
   useEffect(() => {
     AOS.init({
-      duration: 1200,  // controls the speed of the animation
-      once: true,  // ensures animation only happens once per element
+      duration: 1200,  
+      once: true,  
     });
   }, []);
 
@@ -42,8 +50,8 @@ const QishKolleksiya = () => {
   return (
     <div className='wrapper'>
       <div className="winter-block">
-        <h2 className='winter-title'>Qish kolleksiyasi</h2>
-        <p className='winter-desc'>Buxoro tabiiy mahsuloti</p>
+        <h2 className='winter-title'>{t('summerData.k2')}</h2>
+        <p className='winter-desc'>{t('aboutCard.middle-title')}</p>
         {rows.map((row, rowIndex) => (
           <div className="winter-card-groups" key={rowIndex} data-aos="fade-up">
             {row.map((value) => (
