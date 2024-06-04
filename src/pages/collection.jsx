@@ -25,10 +25,7 @@ import img18 from '../assets/siteimg/k8.jpg';
 import img19 from '../assets/siteimg/k9.jpg';
 import img25 from '../assets/siteimg/k10.jpg';
 
-
 import { useTranslation } from "react-i18next";
-
-
 
 const Card = ({ image, title }) => {
     return (
@@ -40,41 +37,45 @@ const Card = ({ image, title }) => {
 };
 
 const Collection = () => {
-
-    const { t } = useTranslation();
-
+    const { t, ready } = useTranslation();  // Ensure that `ready` is also destructured from useTranslation
 
     const cardsData = [
-        { id: 1, image: img1, title: "Kvadratchalar", category: "Bahor Kolleksiyasi" },
-        { id: 2, image: img2, title: 'Ikat', category: "Qish Kolleksiyasi" },
-        { id: 3, image: img3, title: 'Davralar', category: "Yoz Kolleksiyasi" },
-        { id: 4, image: img4, title: 'Geometriya kok', category: "Kuz Kolleksiyasi" },
-        { id: 5, image: img5, title: 'Tropik barglar', category: "Bahor Kolleksiyasi" },
-        { id: 6, image: img6, title: 'Bambi', category: "Qish Kolleksiyasi" },
-        { id: 7, image: img7, title: 'Vizantiya', category: "Yoz Kolleksiyasi" },
-        { id: 8, image: img8, title: 'Kechki bog', category: "Kuz Kolleksiyasi" },
-        { id: 9, image: img9, title: 'Pat Markiz', category: "Bahor Kolleksiyasi" },
-        { id: 10, image: img10, title: 'Lavanda atirgullari', category: "Qish Kolleksiyasi" },
-        { id: 11, image: img11, title: 'Safari', category: "Yoz Kolleksiyasi" },
-        { id: 12, image: img12, title: 'Kop rangli ametist', category: "Kuz Kolleksiyasi" },
-        { id: 13, image: img13, title: 'Shivali bezak', category: "Bahor Kolleksiyasi" },
-        { id: 14, image: img14, title: 'Zumrad', category: "Qish Kolleksiyasi" },
-        { id: 15, image: img15, title: 'Malaxit qutisi', category: "Yoz Kolleksiyasi" },
-        { id: 16, image: img16, title: 'Bahorning hidlari', category: "Kuz Kolleksiyasi" },
-        { id: 17, image: img17, title: 'Kuzgi barglar tushishi', category: "Bahor Kolleksiyasi" },
-        { id: 18, image: img18, title: 'Moviy shabada', category: "Qish Kolleksiyasi" },
-        { id: 19, image: img19, title: 'Moviy suv', category: "Yoz Kolleksiyasi" },
-        { id: 20, image: img25, title: 'Plaid', category: "Kuz Kolleksiyasi" },
+        { id: 1, image: img1, title: t("cardsData.title1"), category: t("cardsData.category1") },
+        { id: 2, image: img2, title: t("cardsData.title2"), category: t("cardsData.category2") },
+        { id: 3, image: img3, title: t("cardsData.title3"), category: t("cardsData.category3") },
+        { id: 4, image: img4, title: t("cardsData.title4"), category: t("cardsData.category4") },
+        { id: 5, image: img5, title: t("cardsData.title5"), category: t("cardsData.category5") },
+        { id: 6, image: img6, title: t("cardsData.title6"), category: t("cardsData.category6") },
+        { id: 7, image: img7, title: t("cardsData.title7"), category: t("cardsData.category7") },
+        { id: 8, image: img8, title: t("cardsData.title8"), category: t("cardsData.category8") },
+        { id: 9, image: img9, title: t("cardsData.title9"), category: t("cardsData.category9") },
+        { id: 10, image: img10, title: t("cardsData.title10"), category: t("cardsData.category10") },
+        { id: 11, image: img11, title: t("cardsData.title11"), category: t("cardsData.category11") },
+        { id: 12, image: img12, title: t("cardsData.title12"), category: t("cardsData.category12") },
+        { id: 13, image: img13, title: t("cardsData.title13"), category: t("cardsData.category13") },
+        { id: 14, image: img14, title: t("cardsData.title14"), category: t("cardsData.category14") },
+        { id: 15, image: img15, title: t("cardsData.title15"), category: t("cardsData.category15") },
+        { id: 16, image: img16, title: t("cardsData.title16"), category: t("cardsData.category16") },
+        { id: 17, image: img17, title: t("cardsData.title17"), category: t("cardsData.category17") },
+        { id: 18, image: img18, title: t("cardsData.title18"), category: t("cardsData.category18") },
+        { id: 19, image: img19, title: t("cardsData.title19"), category: t("cardsData.category19") },
+        { id: 20, image: img25, title: t("cardsData.title20"), category: t("cardsData.category20") },
     ];
 
+   
+
+
     const [currentPage, setCurrentPage] = useState(1);
-    const [selectedFilter, setSelectedFilter] = useState('all');
+    const [selectedFilter, setSelectedFilter] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
     const cardsPerPage = 9;
 
     useEffect(() => {
         AOS.init({ duration: 1000 });
-    }, []);
+        if (ready) {
+            setSelectedFilter(t('cardsData.jami'));  // Now set after translations are ready
+        }
+    }, [ready, t]);  // Depend on `ready` and `t`
 
     const handleFilterChange = (filter) => {
         setSelectedFilter(filter);
@@ -87,7 +88,7 @@ const Collection = () => {
     };
 
     const filteredCards = cardsData.filter(card => {
-        return (selectedFilter === 'all' || card.category === selectedFilter) &&
+        return (selectedFilter === t('cardsData.jami') || card.category === selectedFilter) &&
                card.title.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
@@ -112,29 +113,49 @@ const Collection = () => {
                                 value={searchTerm} 
                                 onChange={handleSearchChange} 
                             />
-                            <h3 className='toplam-text-2'>Toplamlar</h3>
+                            <h3 className='toplam-text-2'>{t('cardsData.toplam-text-2')}</h3>
                             <ul className='collection-itemas'>
-                                <li className='collection-iitem'><a className='collection-link' href="#" onClick={() => handleFilterChange('Bahor Kolleksiyasi')}>Bahorgi Kolleksiyalar</a></li>
-                                <li className='collection-iitem'><a className='collection-link' href="#" onClick={() => handleFilterChange('Qish Kolleksiyasi')}>Qishgi Kolleksiyalar</a></li>
-                                <li className='collection-iitem'><a className='collection-link' href="#" onClick={() => handleFilterChange('Yoz Kolleksiyasi')}>Yozgi Kolleksiyalar</a></li>
-                                <li className='collection-iitem'><a className='collection-link' href="#" onClick={() => handleFilterChange('Kuz Kolleksiyasi')}>Kuzgi Kolleksiyalar</a></li>
-                                <li className='collection-iitem'><a className='collection-link' href="#" onClick={() => handleFilterChange('all')}>Hammasi</a></li>
+                                <li className='collection-iitem'>
+                                    <a className='collection-link' href="#" onClick={() => handleFilterChange(t('cardsData.category1'))}>
+                                        {t('cardsData.category1')}
+                                    </a>
+                                </li>
+                                <li className='collection-iitem'>
+                                    <a className='collection-link' href="#" onClick={() => handleFilterChange(t('cardsData.category2'))}>
+                                        {t('cardsData.category2')}
+                                    </a>
+                                </li>
+                                <li className='collection-iitem'>
+                                    <a className='collection-link' href="#" onClick={() => handleFilterChange(t('cardsData.category3'))}>
+                                        {t('cardsData.category3')}
+                                    </a>
+                                </li>
+                                <li className='collection-iitem'>
+                                    <a className='collection-link' href="#" onClick={() => handleFilterChange(t('cardsData.category4'))}>
+                                        {t('cardsData.category4')}
+                                    </a>
+                                </li>
+                                <li className='collection-iitem'>
+                                    <a className='collection-link' href="#" onClick={() => handleFilterChange(t('cardsData.jami'))}>
+                                        {t('cardsData.jami')}
+                                    </a>
+                                </li>
                             </ul>
                         </form>
                         <div className="count">
-                            <p className='toplam-text'>To'plam</p>
-                            <p>{indexOfFirstCard + 1} - {Math.min(indexOfLastCard, filteredCards.length)} tadan {filteredCards.length} koʻrsatilmoqda</p>
+                            <p className='toplam-text'>{t('cardsData.toplam-text-2')}</p>
+                            <p>{indexOfFirstCard + 1} - {Math.min(indexOfLastCard, filteredCards.length)} {t('cardsData.tadan')} {filteredCards.length} {t('cardsData.koʻrsatilmoqda')}</p>
                         </div>
                     </div>
 
                     <div className="filter-select">
                         <form action="#">
                             <select name="name" id="id" onChange={(e) => handleFilterChange(e.target.value)}>
-                                <option value="all">Ommobop</option>
-                                <option value="Bahor Kolleksiyasi">Bahor Kolleksiyasi</option>
-                                <option value="Qish Kolleksiyasi">Qish Kolleksiyasi</option>
-                                <option value="Yoz Kolleksiyasi">Yoz Kolleksiyasi</option>
-                                <option value="Kuz Kolleksiyasi">Kuz Kolleksiyasi</option>
+                                <option value={t('cardsData.jami')}>{t('cardsData.jami')}</option>
+                                <option value={t('cardsData.category1')}>{t('cardsData.category1')}</option>
+                                <option value={t('cardsData.category2')}>{t('cardsData.category2')}</option>
+                                <option value={t('cardsData.category3')}>{t('cardsData.category3')}</option>
+                                <option value={t('cardsData.category4')}>{t('cardsData.category4')}</option>
                             </select>
                         </form>
                     </div>
@@ -151,7 +172,7 @@ const Collection = () => {
                             <button
                                 key={index + 1}
                                 onClick={() => paginate(index + 1)}
-                                className={currentPage === index + 1 ? 'active' : ''}
+                                className={index + 1 === currentPage ? 'active' : ''}
                             >
                                 {index + 1}
                             </button>
