@@ -16,9 +16,9 @@ const Contact = () => {
     event.preventDefault();
     setLoading(true);
     
-    const token = "YOUR_TELEGRAM_BOT_TOKEN";
+    const token =  "7045954792:AAFQAI9R6q9CQ5veso12Ijc5dWToIVCMOj4";
     const URL = `https://api.telegram.org/bot${token}/sendMessage`;
-    const chat_id = 'YOUR_CHAT_ID';
+    const chat_id = '5011507273';
     const name = event.target.elements.name.value;
     const telRaqam = event.target.elements.telRaqam.value;
     const msg1 = event.target.elements.message1.value;
