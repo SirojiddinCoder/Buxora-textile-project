@@ -10,7 +10,8 @@
     border-radius: 50px;
     border: none;
     background-color: #efefef;
-    padding: 20px 180px;
+    padding: 20px 50px;
+    width: 50%;
     margin-bottom: 0;
     font-weight: 700;
     color: black;
@@ -20,7 +21,7 @@
 .contact-textAre{
     border-radius: 20px;
     height: 263px;
-   width: 70%;
+   width: 57%;
    margin: 20px 0;
    background-color: #efefef;
    padding: 25px;
