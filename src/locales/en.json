@@ -131,6 +131,13 @@
   "tadan":"from",
   "koʻrsatilmoqda":"being shown"
  
+},
+"contact":{
+  "Aloqa":"Contact",
+  "Yuborish":"Send",
+  "Ismingiz":"Your Name",
+  "telraqamingiz":"Your Phone Number",
+  "habar":"Send us a message"
 }
 
   }

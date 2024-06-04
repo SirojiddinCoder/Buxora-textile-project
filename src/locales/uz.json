@@ -139,6 +139,13 @@
         "tadan":"tadan",
         "koʻrsatilmoqda":"koʻrsatilmoqda"
        
+       },
+       "contact":{
+        "Aloqa":"Aloqa",
+        "Yuborish":"Yuborish",
+        "Ismingiz":"Ismingiz",
+        "telraqamingiz":"tel raqamingiz",
+        "habar":"bizga habar yuboring"
        }
      
 }
