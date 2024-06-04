@@ -137,7 +137,9 @@
   "Yuborish":"Send",
   "Ismingiz":"Your Name",
   "telraqamingiz":"Your Phone Number",
-  "habar":"Send us a message"
+  "habar":"Send us a message",
+  "BTN1":"Sending",
+  "BTN2":"Send"
 }
 
   }

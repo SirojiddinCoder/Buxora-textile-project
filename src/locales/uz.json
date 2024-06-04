@@ -145,7 +145,11 @@
         "Yuborish":"Yuborish",
         "Ismingiz":"Ismingiz",
         "telraqamingiz":"tel raqamingiz",
-        "habar":"bizga habar yuboring"
+        "habar":"bizga habar yuboring",
+        "BTN1":"Yuborilmoqda",
+        "BTN2":"Yuborish",
+        "TOASTTEXT":"Muvofaqiyatli yuborildi"
        }
+    
      
 }

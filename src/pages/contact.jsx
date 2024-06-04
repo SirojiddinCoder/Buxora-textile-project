@@ -1,20 +1,46 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Components/Navbar/navbar';
 import Footer from '../Components/Footer/Footer';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './contact.css';
 import { useTranslation } from "react-i18next";
+import axios from 'axios';
 
-
-
-export const Contact = () => {
+const Contact = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  const [loading, setLoading] = useState(false);
+  
+  const SendMessage = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    
+    const token = "YOUR_TELEGRAM_BOT_TOKEN";
+    const URL = `https://api.telegram.org/bot${token}/sendMessage`;
+    const chat_id = 'YOUR_CHAT_ID';
+    const name = event.target.elements.name.value;
+    const telRaqam = event.target.elements.telRaqam.value;
+    const msg1 = event.target.elements.message1.value;
+    
+    const MessageContent = `ismi : ${name} \n Tel: ${telRaqam} \n Habar: ${msg1} `;
+    
+    try {
+      const response = await axios.post(URL, {
+        chat_id: chat_id,
+        text: MessageContent
+      });
+      if (response.status === 200) {
+        toast.success('Habaringiz yuborildi');
+        event.target.reset();
+      }
+    } catch (error) {
+      toast.error('Xatolik yuz berdi');
+      console.error('Xatolik yuz berdi', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const yunusobodCoords = [41.3663, 69.2890];
   const bodomzorCoords = [41.3275, 69.2817];
@@ -22,19 +48,37 @@ export const Contact = () => {
   return (
     <div>
       <Navbar />
-
       <div className="container">
         <div className="contact-us">
           <div className="contact-us-left" data-aos="fade-right">
             <h2 className='contact-title'>{t('contact.Aloqa')}</h2>
-            <form action="#">
-    <input className='contact-input' type="text" placeholder={t('contact.Ismingiz')} data-aos="fade-up" /> <br />
-    <input className='contact-input' type="tel" placeholder={t('contact.telraqamingiz')} data-aos="fade-up" data-aos-delay="200" /> <br />
-    <textarea className='contact-textAre' name="message" id="message" placeholder={t('contact.habar')} data-aos="fade-up" data-aos-delay="400"></textarea>
-    <div className="submit" data-aos="fade-up" data-aos-delay="600">
-        <a className='send-btn' href="#">{t('contact.Yuborish')}</a>
-    </div>
-</form>
+            <form id="MyForm" onSubmit={SendMessage}>
+              <input 
+                className='contact-input' 
+                type="text" 
+                name="name"
+                placeholder={t('contact.Ismingiz')} 
+                required 
+              /> <br />
+              <input 
+                className='contact-input' 
+                type="tel" 
+                name="telRaqam"
+                placeholder={t('contact.telraqamingiz')} 
+                required 
+              /> <br />
+              <textarea 
+                className='contact-textAre' 
+                name="message1" 
+                placeholder={t('contact.habar')} 
+                required 
+              ></textarea>
+              <div className="submit">
+                <button className="send-btn" type="submit" disabled={loading}>
+                  {loading ? t("contact.BTN1") : t("contact.BTN2")}
+                </button>
+              </div>
+            </form>
           </div>
           <div className="contact-us-right" data-aos="fade-left">
             <YMaps query={{ apikey: 'YOUR_YANDEX_API_KEY' }}>
@@ -55,7 +99,7 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-
+      <ToastContainer />
       <Footer />
     </div>
   );
