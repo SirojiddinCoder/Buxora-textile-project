@@ -105,4 +105,10 @@ transition: 0.4s all ease-in-out;
   }
   .line{
     margin-top: 25px;
+  } 
+
+  [data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    margin: 0;
+    transform: translateZ(0);
   }
