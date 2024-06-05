@@ -12,8 +12,8 @@ export const Home = () => {
     <div>
         <Navbar />
         <NavbarHome />
-      {/* <AboutCard images1={true} /> 
-      <QishKollleksiya />
+      <AboutCard images1={true} /> 
+      {/* <QishKollleksiya />
       <AboutCard /> 
       <KuzKolleksiya />
       <AboutCard images3={true} /> 

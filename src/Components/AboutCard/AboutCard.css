@@ -15,6 +15,15 @@
     justify-content: center;
     padding-right: 55px;
     padding-left: 55px;
+    @media (max-width: 600px) {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: auto;
+     height: auto;
+   margin-top: 50px;
+   padding: 0;
+    }
   }
   .wrapper-block:hover{
     border-radius: 18px;
@@ -26,6 +35,10 @@
   }
   .WrapperImg{
     width: 750px;
+    @media (max-width: 600px) {
+      width: 250px;
+      height: auto;
+    }
   }
   .wrapper-title{
     color: white;
@@ -33,6 +46,11 @@
     font-weight: bold;
     margin: 0;
     font-style: italic;
+    @media (max-width: 600px) {
+      font-size: 30px;
+      text-align: center;
+      
+    }
 
   }
   .wrapper-desc{
@@ -40,14 +58,29 @@
     font-size: 25px;
     margin: 0;
  margin-left: 20px;
+ @media (max-width: 600px) {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+}
   }
   .middle-title{
     color: white; 
    font-size: 25px;
    margin: 0;
+   @media (max-width: 600px) {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+  }
   }
   .middle-desc{
     color: white;
+    @media (max-width: 600px) {
+      
+      text-align: center;
+    }
 
  
   }
