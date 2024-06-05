@@ -31,3 +31,10 @@
     height: 200px;
     border-radius: 20px;
 }
+.winter-img:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+.winter-img h4:hover{
+    cursor: pointer;
+}

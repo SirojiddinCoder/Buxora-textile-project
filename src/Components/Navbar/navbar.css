@@ -11,6 +11,12 @@ body {
   top: 0;
   z-index: 1000; 
   transition: top 0.3s;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+   @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .navbar.sticky {
@@ -29,6 +35,17 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    padding: 0px 20px;
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0px 20px;
+    background-color: red;
+  }
 }
 
 .nav-elements {
@@ -98,12 +115,6 @@ body {
   background-color: #f1f1f1;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .nav-elements ul li:not(:last-child) {
-    margin-right: 30px;
-  }
-}
 
 @media (max-width: 600px) {
   .menu-icon {
@@ -165,6 +176,9 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   /* padding: 0 30px; */
+  @media (max-width: 600px) {
+    padding: 0px 10px;    
+  }
 }
 
 .Card-Home {
@@ -174,10 +188,19 @@ body {
   height: 370px;
   background-color: #464342;
   border-radius: 15px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    width: auto;
+  }
 }
 
 .img1 {
   width: 850px;
+  @media (max-width: 600px) {
+    width: 100%;  
+  }
 }
 
 .home-text-title-1 {
@@ -187,6 +210,9 @@ body {
   color: white;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
 }
 
 .home-text-title-2 {
@@ -196,6 +222,9 @@ body {
   font-size: 60px;
   font-family: sans-serif;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  @media (max-width: 600px) {
+    font-size: 40px;
+  } 
 }
 
 .home-text-desc {
@@ -205,6 +234,9 @@ body {
   font-family: sans-serif;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  @media (max-width: 600px) {
+    font-size: 45px;
+  }
 }
 
 .Home-text {
@@ -218,6 +250,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   padding-top: 120px;
+  @media (max-width:768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .mini-card {
@@ -260,6 +295,9 @@ body {
   .Card-Home {
     width: 100%;
     height: 250px;
+    @media (max-width: 600px) {
+      width: auto;
+    }
   }
 
   .home-text-title-1 {
