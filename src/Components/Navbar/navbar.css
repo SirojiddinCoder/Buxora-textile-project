@@ -44,7 +44,7 @@ body {
   @media (max-width: 768px) {
     max-width: 100%;
     padding: 0px 20px;
-    background-color: red;
+    /* background-color: red; */
   }
 }
 
