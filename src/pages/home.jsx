@@ -12,7 +12,7 @@ export const Home = () => {
     <div>
         <Navbar />
         <NavbarHome />
-      <AboutCard images1={true} /> 
+      <AboutCard images1={true} />  
       {/* <QishKollleksiya />
       <AboutCard /> 
       <KuzKolleksiya />

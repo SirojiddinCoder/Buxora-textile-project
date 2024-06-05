@@ -27,7 +27,7 @@ export const Footer = () => {
               <br />
               <br />
          
-+998 93 960 78 00
+                +998 93 960 78 00
               </p>
           </div>
         </div>

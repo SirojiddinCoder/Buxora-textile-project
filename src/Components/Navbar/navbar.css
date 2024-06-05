@@ -29,7 +29,6 @@ body {
 
 .container {
   max-width: 1400px;
-  margin: 0 auto;
   padding: 0 30px;
   display: flex;
   justify-content: space-between;
@@ -56,14 +55,30 @@ body {
 .nav-elements ul {
   list-style: none;
   display: flex;
-  padding: 0;
-  margin: 0;
-  margin-right: 250px;
+  /* padding: 0;   */
+  margin-right: 30px;
+  column-gap: 45px;
+}
+@media (min-width: 768px) {
+  .nav-elements ul{
+    margin-right: 70px;
+ 
+  }
+}
+@media (min-width: 1200px) {
+  .nav-elements ul{
+    margin-right: 230px;
+  }
+}
+@media (min-width: 1300px) {
+  .nav-elements ul{
+    margin-right: 320px;
+  }
+}
+.nav-elements ul li:nth-child(2){
+  text-wrap: nowrap;
 }
 
-.nav-elements ul li {
-  padding: 0 50px;
-}
 
 .nav-elements ul li a {
   text-decoration: none;
@@ -87,7 +102,7 @@ body {
   align-items: center;
   background-color: #fff;
   border: 1px solid #ccc;
-  padding: 5px 10px;
+  padding: 5px 18px;
   border-radius: 5px;
 }
 
@@ -116,13 +131,15 @@ body {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 830px) {
   .menu-icon {
     display: block;
     cursor: pointer;
   }
 
   .nav-elements {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     right: 0;
     top: 60px;
@@ -149,7 +166,6 @@ body {
 }
 
 .language-selector {
-  margin-left: auto;
   display: flex;
   align-items: center;
 }
@@ -175,7 +191,7 @@ body {
 .container1 {
   max-width: 1400px;
   margin: 0 auto;
-  /* padding: 0 30px; */
+
   @media (max-width: 600px) {
     padding: 0px 10px;    
   }
@@ -193,6 +209,7 @@ body {
     height: auto;
     padding: 15px;
     width: auto;
+      /* padding: 0 30px; */
   }
 }
 
@@ -253,6 +270,7 @@ body {
   padding-top: 120px;
   @media (max-width:768px) {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 15px;
   }
 }
 

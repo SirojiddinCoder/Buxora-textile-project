@@ -18,7 +18,7 @@ export const NavbarHome = () => {
   }, []);
 
   return (
-    <div className="container1">
+    <di v className="container1">
       <div className="Card-Home">
         <div className="Home-img" data-aos="fade-right">
           <img className="img1" src={img1} alt="nimadir" />
@@ -59,7 +59,7 @@ export const NavbarHome = () => {
           </div>
         </div>
       </div>
-    </div>
+    </di>
   );
 };
 
