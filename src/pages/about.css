@@ -7,6 +7,9 @@
     height: 2px;
     background-color: black;
     margin: 0 auto;
+    @media (max-width:600px) {
+        width: 210px;
+    }
 }
 .about-us{
    margin-top: 80px;
@@ -18,7 +21,12 @@
 .about-title{
     text-align: center;
     font-size: 40px;
-  
+            
+    @media (max-width:600px) {
+        font-size: 20px;
+          text-align: center;
+          padding-bottom: 20px;
+    }
    
 }
 .aboutIcon{
@@ -28,6 +36,7 @@
     position: relative;
     top: -30px;
     margin: 0 auto;
+   
 }
 .about-desc{
     font-size: 18px;
@@ -35,9 +44,29 @@
     padding-bottom: 15px;
     line-height: 25px;
     color: #999;
+    @media (max-width:600px) {
+        padding: 15px 15px;
+     
+     
+        
+    }
 }
 .video-content{
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+  
+    @media (max-width:600px) {
+        padding: 15px 15px;
+        width: 90%;
+        height: 500px;
+       
+    }
+}
+.frame{
+    width: 80%;
+    height: 500px;
+    
 }

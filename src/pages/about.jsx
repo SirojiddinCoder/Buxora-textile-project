@@ -46,7 +46,7 @@ export const About = () => {
         </p>
 
         <div className="video-content" data-aos="fade-up">
-          <iframe width="80%" height="500" src="https://www.youtube.com/embed/7_v1C0sgxbs?si=mNtBw8QFDvI5e9zD" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <iframe className='frame' src="https://www.youtube.com/embed/7_v1C0sgxbs?si=mNtBw8QFDvI5e9zD" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
       </div>
       <Footer />

@@ -7,6 +7,7 @@
    width: 340px;
   }
   .footer{
+ 
     height: auto;
     width: 100%;
     background-color: #616884;
@@ -15,15 +16,33 @@
     flex-wrap: wrap;
     row-gap: 18px;  
     padding: 20px 0;
+    @media (max-width:600px) {
+      padding: 20px 10px;
+      font-size: 12px;
+      
+    }
   }
   .ikon{
-    font-size: 55px;
+    font-size: 40px;
+    @media (max-width:600px) {
+  
+      font-size: 30px;
+      
+    }
   }
   .footer-logo{
     width: 200px;
   }
   .text-copy{
     text-align: center;
-   margin: 0;
+   padding: 15px 15px;
+   @media (max-width:600px) {
+
+    font-size: 14px;
+     text-wrap: wrap;
+     padding: 5px 15px;
+     
+    
+  }
   }
  
