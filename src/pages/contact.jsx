@@ -51,7 +51,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact-us">
           <div className="contact-us-left" data-aos="fade-left">
-            <h2 className='contact-title'>{t('contact.Aloqa')}</h2>
+            <h2 className='contact-title'>{t('contact.Aloqa')}dddd</h2>
             <form id="MyForm" onSubmit={SendMessage}>
               <input 
                 className='contact-input' 
