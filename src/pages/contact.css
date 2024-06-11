@@ -1,9 +1,11 @@
 .container{
     width: 90%;
     max-width: 1400px;
+    
+}
+body{
     overflow-x: hidden;
 }
-
 .custom-map {
     width: 700px;
     height: 700px;
