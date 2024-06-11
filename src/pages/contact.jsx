@@ -50,7 +50,7 @@ const Contact = () => {
       <Navbar />
       <div className="container">
         <div className="contact-us">
-          <div className="contact-us-left" data-aos="fade-up">
+          <div className="contact-us-left" data-aos="fade-left">
             <h2 className='contact-title'>{t('contact.Aloqa')}</h2>
             <form id="MyForm" onSubmit={SendMessage}>
               <input 
