@@ -18,7 +18,7 @@ export const Home = () => {
       <KuzKolleksiya />
       <AboutCard images3={true} /> 
       <KuzKolleksiya Yoz={true} />
-      {/* <Yangiliklar /> */}
+      <Yangiliklar />
       <Footer />
     </div>
   )

@@ -34,6 +34,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  width: 90%;
+  margin: 0 auto;
 
   @media (max-width: 600px) {
     max-width: 100%;
@@ -198,9 +200,11 @@ body {
 }
 
 .Card-Home {
+ 
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: 370px;
   background-color: #464342;
   border-radius: 15px;
@@ -264,6 +268,8 @@ body {
 
 /* //////============ */
 .Home-mini-card-groups {
+  width: 90%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;

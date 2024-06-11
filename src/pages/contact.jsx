@@ -50,7 +50,7 @@ const Contact = () => {
       <Navbar />
       <div className="container">
         <div className="contact-us">
-          <div className="contact-us-left" data-aos="fade-right">
+          <div className="contact-us-left" data-aos="fade-up">
             <h2 className='contact-title'>{t('contact.Aloqa')}</h2>
             <form id="MyForm" onSubmit={SendMessage}>
               <input 
@@ -82,14 +82,13 @@ const Contact = () => {
           </div>
           <div className="contact-us-right" data-aos="fade-left">
             <YMaps query={{ apikey: 'YOUR_YANDEX_API_KEY' }}>
-              <div>
+              <div className='maps-1'>
                 <Map
                   defaultState={{
                     center: [41.3463, 69.2853],
                     zoom: 12,
                   }}
-                  width="700px"
-                  height="700px"
+                  className="custom-map"
                 >
                   <Placemark geometry={yunusobodCoords} properties={{ balloonContent: 'Yunusobod' }} />
                   <Placemark geometry={bodomzorCoords} properties={{ balloonContent: 'Bodomzor' }} />

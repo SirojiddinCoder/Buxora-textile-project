@@ -144,12 +144,12 @@ const Collection = () => {
                         </form>
                         <div className="count">
                             <p className='toplam-text'>{t('cardsData.toplam-text-2')}</p>
-                            <p>{indexOfFirstCard + 1} - {Math.min(indexOfLastCard, filteredCards.length)} {t('cardsData.tadan')} {filteredCards.length} {t('cardsData.koʻrsatilmoqda')}</p>
+                            <p className='none'>{indexOfFirstCard + 1} - {Math.min(indexOfLastCard, filteredCards.length)} {t('cardsData.tadan')} {filteredCards.length} {t('cardsData.koʻrsatilmoqda')}</p>
                         </div>
                     </div>
 
                     <div className="filter-select">
-                        <form action="#">
+                        <form action="#" className='for-none'>
                             <select name="name" id="id" onChange={(e) => handleFilterChange(e.target.value)}>
                                 <option value={t('cardsData.jami')}>{t('cardsData.jami')}</option>
                                 <option value={t('cardsData.category1')}>{t('cardsData.category1')}</option>
@@ -161,6 +161,23 @@ const Collection = () => {
                     </div>
                 </div>
 
+          
+                <div className="responsive">
+                   <div>
+                        <p className='toplam-text1'>{t('cardsData.toplam-text-2')}</p>
+                        </div>
+                    <div className="filter-select1">
+                        <form action="#">
+                            <select name="name" id="id" onChange={(e) => handleFilterChange(e.target.value)}>
+                                <option value={t('cardsData.jami')}>{t('cardsData.jami')}</option>
+                                <option value={t('cardsData.category1')}>{t('cardsData.category1')}</option>
+                                <option value={t('cardsData.category2')}>{t('cardsData.category2')}</option>
+                                <option value={t('cardsData.category3')}>{t('cardsData.category3')}</option>
+                                <option value={t('cardsData.category4')}>{t('cardsData.category4')}</option>
+                            </select>
+                        </form>
+                    </div>
+                   </div>
                 <div className="card-list-container">
                     <div className="card-list"> 
                         {currentCards.map(card => (
