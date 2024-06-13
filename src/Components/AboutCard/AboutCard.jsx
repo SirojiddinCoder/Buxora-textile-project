@@ -42,7 +42,7 @@ const AboutCard = ({ images1, images3 }) => {
             {t('aboutCard.middle-desc2')} <br />
             {t('aboutCard.middle-desc3')} <br />
             <div className="line">
-              <a href="#" className='wrapper-btn'>{t('aboutCard.wrapper-btn')}</a>
+              <a href="#kuzkolleksiya" className='wrapper-btn'>{t('aboutCard.wrapper-btn')}</a>
             </div>
           </p>
         </div>

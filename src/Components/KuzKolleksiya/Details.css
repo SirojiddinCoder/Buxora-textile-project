@@ -1,0 +1,45 @@
+table{
+    width: 400px;
+    @media (max-width:600px) {
+        width: 300px;
+        margin-left: 20px;
+      
+        
+    }
+}
+  
+
+table tr th, table tr td {
+    padding: 1em 1.4em;
+    border: solid 1px #bbb;
+    text-align: left;
+}
+.details-block{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-wrap: wrap;
+    margin-top: 100px;
+    margin-bottom: 80px;
+
+
+ 
+}
+.container-details{
+    width: 90%;
+    background-color: 1440px;
+    margin: 0 auto;
+}
+.details-img img{
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    @media (max-width:600px) {
+        width: 300px;
+        height: 300px;
+       margin-left: 20px;
+    }
+}
+.title{
+    margin-left: 20px;
+}

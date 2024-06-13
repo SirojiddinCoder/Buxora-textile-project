@@ -24,10 +24,11 @@ import summerImg7 from '../../assets/siteimg/s7.jpg';
 import summerImg8 from '../../assets/siteimg/s8.jpg';
 import summerImg9 from '../../assets/siteimg/s9.jpg';
 import summerImg10 from '../../assets/siteimg/s10.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const KuzKolleksiya = ({ Yoz }) => {
-  const { t } = useTranslation();
-
+  const { t } = useTranslation(); 
+  const navigate = useNavigate();
   const winterData = [
     { id: 1, img: img1, title: t("winterData.title1") },
     { id: 2, img: img2, title: t("winterData.title2") },
@@ -64,16 +65,22 @@ const KuzKolleksiya = ({ Yoz }) => {
     rows.push(data.slice(i, i + 5));
   }
 
+  const goToDetails = (id) => {
+
+    navigate(`/details/${id}`);
+  };
+
+
   return (
-    <div className='wrapper'>
+    <div className='wrapper' id='kuzkolleksiya'>
       <div className="winter-block">
-        <h2 className='winter-title' data-aos="fade-up">{Yoz ? t('summerData.k') : t('summerData.k1')}</h2>
-        <p className='winter-desc' data-aos="fade-up" data-aos-delay="100">{t('aboutCard.middle-title')}</p>
+        <h2 className='winter-title' data-aos="fade-left">{Yoz ? t('summerData.k') : t('summerData.k1')}</h2>
+        <p className='winter-desc' data-aos="fade-left" data-aos-delay="100">{t('aboutCard.middle-title')}</p>
         {rows.map((row, rowIndex) => (
-          <div className="winter-card-groups" key={rowIndex} data-aos="fade-up" data-aos-delay={rowIndex * 100}>
+          <div className="winter-card-groups" key={rowIndex} data-aos="fade-left" data-aos-delay={rowIndex * 100}>
             {row.map((value) => (
-              <div className="winter-card" key={value.id} data-aos="fade-up" data-aos-delay={rowIndex * 100 + value.id * 50}>
-                <img className='winter-img' src={value.img} alt={value.title} />
+              <div className="winter-card" key={value.id} data-aos="fade-left" data-aos-delay={rowIndex * 100 + value.id * 50}>
+                <img onClick={() => goToDetails(value.id)} className='winter-img' src={value.img} alt={value.title} />
                 <h4>{value.title}</h4>
               </div>
             ))}
